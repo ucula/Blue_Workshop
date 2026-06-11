@@ -19,7 +19,7 @@ export interface Address {
 
 export interface GeoLocation {
   lat: string;
-  lng?: string;
+  lng: string;
 }
 
 export interface Company {

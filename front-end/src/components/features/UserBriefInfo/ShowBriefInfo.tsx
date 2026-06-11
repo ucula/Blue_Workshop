@@ -51,7 +51,7 @@ export default function UserBriefInfo() {
               key={user._id}
               user={user}
               onClick={() => {
-                handleInfo(user._id);
+                if (user._id) handleInfo(user._id);
               }}
             />
           ))}
