@@ -15,7 +15,7 @@ export default function UserAllInfoLogic() {
     setDel(!del);
   };
   const handleHome = () => {
-    navigate("/brief");
+    navigate("/");
   };
   const handleEdit = () => {
     navigate(`/edit/${id}`);

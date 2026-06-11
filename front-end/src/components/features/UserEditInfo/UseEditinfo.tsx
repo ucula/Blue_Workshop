@@ -40,7 +40,7 @@ export default function UseEditInfo() {
   }, [user]);
 
   const handleHome = () => {
-    navigate("/brief");
+    navigate("/");
   };
 
   const handleCancel = () => {

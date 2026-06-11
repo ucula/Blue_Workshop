@@ -6,7 +6,7 @@ export function DelUserById() {
   const { id } = useParams<{ id: string }>();
   return useMutation({
     mutationFn: async () => {
-      const response = await fetch(`http://localhost:5001/api/users/${id}`, {
+      const response = await fetch(`http://localhost:5001/api/user/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

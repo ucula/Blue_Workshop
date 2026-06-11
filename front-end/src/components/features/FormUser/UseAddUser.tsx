@@ -33,7 +33,7 @@ export default function FormUserLogic() {
   });
 
   const handleHome = () => {
-    navigate("/brief");
+    navigate("/");
   };
 
   const updateField = (key: keyof User, value: string) => {
@@ -88,12 +88,15 @@ export default function FormUserLogic() {
     // Check duplicates
     if (
       newUser.username.trim() &&
-      users.some((u) => u.username === newUser.username)
+      users.some((u: User) => u.username === newUser.username)
     ) {
       newError.username = "Username already exists";
       hasError = true;
     }
-    if (newUser.email.trim() && users.some((u) => u.email === newUser.email)) {
+    if (
+      newUser.email.trim() &&
+      users.some((u: User) => u.email === newUser.email)
+    ) {
       newError.email = "Email already exists";
       hasError = true;
     }
